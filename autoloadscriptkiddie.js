@@ -1,12 +1,5 @@
 
-$(window)["on"]("scroll", function() {
-    $("img")["each"](function() {
-        if (lazyload(this)) {
-            $(this)["attr"]("src", $(this)["data"]("src"))["removeAttr"]("data-src")
-        }
-    })
-});
-var $pager = $("#blog-pagerx"),
+var $pager = $("#blog-pager"),
     $posts = $(".blog-posts");
 $pager["find"]("#blog-pager-newer-link")["remove"]();
 $pager["on"]("click", "#blog-pager-older-link a", function() {
